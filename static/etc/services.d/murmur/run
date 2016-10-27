@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+
+umask 0002
+
+echo "Starting Murmur"
+exec s6-setuidgid bytesized /app/murmur.x86 -ini /config/murmur.ini
